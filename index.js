@@ -7,7 +7,12 @@ const app = express();
 app.use(cors());
 const httpServer=createServer(app)
 
-const io = new Server(httpServer)
+const io = new Server(httpServer,{
+  cors:{
+    origin:["http://localhost:4200","https://code-editor.shivamjha2001.com","https://code-editor.shivamjha2001.com/#/home"],
+    credentials:true
+  }
+})
 
 app.use(express.json());
 
