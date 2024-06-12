@@ -11,7 +11,9 @@ const io = new Server(httpServer,{
   cors:{
     origin:["http://localhost:4200","https://code-editor.shivamjha2001.com","https://code-editor.shivamjha2001.com/#/home"],
     credentials:true
-  }
+  },
+  allowEIO3:true,
+  transports: ["websocket", "polling"],
 })
 
 app.use(express.json());
